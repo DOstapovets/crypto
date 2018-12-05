@@ -24,7 +24,7 @@ module.exports = {
       let data = [];
       setInterval(() => {
         data.push(logger.getEvent());
-      }, 200);
+      }, Math.random() * config.timeout + 0.2 * config.timeout);
       //  Math.random() * config.timeout + 0.2 * config.timeout
       setInterval(() => {
         if (data.length) {
