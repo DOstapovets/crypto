@@ -1,3 +1,5 @@
-require("./collector/collector").run();
-require("./device/device").run();
-require("./relay/relay").run();
+const config = require("./config").setup();
+
+require("./collector/collector").run(config);
+require("./device/device").run(config);
+require("./relay/relay").run(config);
